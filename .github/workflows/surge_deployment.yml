@@ -27,16 +27,11 @@ jobs:
       with:
         node version: 12 
     
-    - uses: actions/checkout@v1
-    - uses: Borales/actions-yarn@v2.0.0
+    - name: GitHub Action for Yarn
+      uses: Borales/Actions-yarn@v2.1.0
       with:
-       cmd: install # will run 'yarn install' command
-    - uses: Borales/actions-yarn@v2.0.0
-      with:
-       cmd: build # will run 'yarn build' command
-    - uses: Borales/actions-yarn@v2.0.0
-      with:
-        cmd: test # will run 'yarn test' command
+        # Yarn command
+        cmd: install # npm insall/ yarn install
 
     - name: Creating build
       run: yarn build
