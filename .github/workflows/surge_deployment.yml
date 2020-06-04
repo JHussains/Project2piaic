@@ -39,7 +39,7 @@ jobs:
         cmd: test # will run 'yarn test' command
 
     - name: Install Surge
-      run: npm install -g surge
+      run: npm install --global surge
       
-    - name: Run surge
+    - name: Deploy to Surge
       run: surge ./biuld project2jh.surge.sh --token ${{ secrets.SURGE_TOKEN }}
