@@ -38,8 +38,11 @@ jobs:
       with:
         cmd: test # will run 'yarn test' command
 
-    - name: Installing surge
-      run: npm install --global surge
-      
-    - name: deploying using surge
-      run: surge ./biuld project2piaic.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+    - name: Creating build
+      run: yarn build
+  
+    - name: Install Surge
+      run: npm install -g surge
+
+    - name: Deploying on surge
+      run: surge ./build project2piaic.surge.sh --token ${{ secrets.SURGE_TOKEN }}
