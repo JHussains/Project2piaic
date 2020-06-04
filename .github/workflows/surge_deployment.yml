@@ -42,3 +42,4 @@ jobs:
       run: rpm install --global surge
       
     - name: Deploy to Surge
+      run: surge ./biuld project2jh.surge.sh --token ${{ secrets.SURGE_TOKEN }}
