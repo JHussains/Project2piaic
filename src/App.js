@@ -7,9 +7,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Pakistan<code>Zindabad</code> By Javed Hussain
-        </p>
+        <h2>
+          Welcome my Android Application</h2>
+      </header>
         <a
           className="App-link"
           href="https://upload.wikimedia.org/wikipedia/commons/d/da/Animated-Flag-Pakistan.gif"
@@ -18,7 +18,6 @@ function App() {
         >
           Pakistan Flag Link
         </a>
-      </header>
     </div>
   );
 }
